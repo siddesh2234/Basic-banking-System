@@ -1,0 +1,100 @@
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: cursive;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* NAVBAR STYLING STARTS */
+.resnavbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: rgb(39, 38, 38);
+    color: #fff;
+}
+
+.resnav-links a {
+    color: #fff;
+}
+
+/* LOGO */
+.reslogo {
+    font-size: 32px;
+}
+
+/* NAVBAR MENU */
+.resmenu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.resmenu li:hover {
+    background-color: #11545e;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.resmenu li {
+    padding: 5px 14px;
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox] {
+    display: none;
+}
+
+/*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+    .resmenu {
+        display: none;
+        position: absolute;
+        background-color: rgb(39, 38, 38);
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .resmenu li:hover {
+        display: inline-block;
+        background-color: #11545e;
+        transition: 0.3s ease;
+    }
+
+    .resmenu li+li {
+        margin-top: 12px;
+    }
+
+    input[type=checkbox]:checked~.resmenu {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+}
